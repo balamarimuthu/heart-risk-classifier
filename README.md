@@ -1,60 +1,61 @@
 # Heart Risk Classifier 🫀
 
-This project uses an XGBoost classifier to predict the risk of heart disease based on patient data. It includes model training, feature importance analysis, and performance evaluation using SHAP and ROC AUC.
+This project uses an XGBoost classifier to predict the risk of heart disease based on patient data. It includes model training, feature importance analysis, and performance evaluation.
 
----
+-----
 
 ## 🔍 Project Overview
 
-- **Model Used**: XGBoost Classifier
-- **Dataset**: `heart data.csv`
-- **Key Features**: Age, cholesterol, blood pressure, etc.
-- **Goal**: Predict whether a person has a high risk of heart disease (binary classification)
+  - **Model Used**: XGBoost Classifier
+  - **Dataset**: `heart.csv`
+  - **Key Files**:
+      - `xgboost.ipynb`: Notebook for data exploration and model training.
+      - `feature_importance_df.csv`: Script to generate feature importance visuals.
+  - **Goal**: Predict whether a person has a high risk of heart disease (binary classification).
 
----
+-----
 
-## 📊 Performance
+## 📊 Performance & Feature Importance
 
 ### ✅ ROC AUC Curve
 
-The Receiver Operating Characteristic (ROC) curve evaluates the model’s ability to separate the two classes.  
-Higher AUC indicates better classification performance.
+The Receiver Operating Characteristic (ROC) curve evaluates the model’s ability to distinguish between high-risk and low-risk patients. A higher Area Under the Curve (AUC) indicates better performance.
 
-> *AUC Score*: **0.89** (example — replace with actual if needed)
+> **AUC Score**: **0.89** (example value)
 
-![AUC Curve](./auc.png)
+### 🧠 Feature Importance
 
----
+Feature importance was calculated to understand which factors contribute most to the model's predictions.
 
-### 🧠 SHAP Feature Importance
+  - **Most Important**: `ST_Slope` was found to be the most influential feature.
+  - **Strong Influence**: `ExerciseAngina` and `ChestPainType`.
+  - **Moderate Influence**: `Cholesterol`, `Oldpeak`, and `Sex`.
 
-SHAP (SHapley Additive exPlanations) values were used to interpret the impact of each feature on model predictions.
+The SHAP summary plot below visualizes the impact of each feature. Red points indicate a high feature value pushing the prediction higher, while blue points indicate a low feature value pushing the prediction lower.
 
-- Red = High Feature Value
-- Blue = Low Feature Value
-- X-axis = SHAP contribution to the prediction
-
-![SHAP Summary](./shap.png)
-
----
+-----
 
 ## ⚙️ How to Run
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/heart-risk-classifier.git
-   cd heart-risk-classifier
-   ```
+1.  **Clone the repo:**
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+    ```bash
+    git clone https://github.com/yourusername/heart-risk-classifier.git
+    cd heart-risk-classifier
+    ```
 
-3. Run the notebook:
-   Open `xgboost.ipynb` in Jupyter or VSCode.
+2.  **Install dependencies:**
 
----
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Run the project:**
+
+      - Open and run the `xgboost.ipynb` notebook for a step-by-step walkthrough.
+      - Alternatively, run the Python scripts to train the model and generate plots.
+
+-----
 
 ## 📦 Requirements
 
@@ -66,13 +67,13 @@ matplotlib
 shap
 ```
 
----
+-----
 
 ## 📜 License
 
 Licensed under the Apache License 2.0.
 
----
+-----
 
 ## 🧠 Author
 
