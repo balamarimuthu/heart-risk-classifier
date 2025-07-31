@@ -5,7 +5,7 @@ This project uses the **XGBoost machine learning algorithm** to predict the pres
 ## 📁 Project Structure
 
 - `xgboost.py`: Trains the XGBoost model on the dataset.
-- `feature_importance_df.py`: Generates a plot showing the importance of each feature.
+- `feature_importance_df.csv`: Generates a plot showing the importance of each feature.
 - `heart data.csv`: The dataset used for training and testing.
 
 
