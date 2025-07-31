@@ -1,29 +1,79 @@
-# 🧠 Heart Disease Prediction using XGBoost
+# Heart Risk Classifier 🫀
 
-This project uses the **XGBoost machine learning algorithm** to predict the presence of heart disease based on patient data.
+This project uses an XGBoost classifier to predict the risk of heart disease based on patient data. It includes model training, feature importance analysis, and performance evaluation using SHAP and ROC AUC.
 
-## 📁 Project Structure
+---
 
-- `xgboost.py`: Trains the XGBoost model on the dataset.
-- `feature_importance_df.csv`: Generates a plot showing the importance of each feature.
-- `heart data.csv`: The dataset used for training and testing.
+## 🔍 Project Overview
 
+- **Model Used**: XGBoost Classifier
+- **Dataset**: `heart data.csv`
+- **Key Features**: Age, cholesterol, blood pressure, etc.
+- **Goal**: Predict whether a person has a high risk of heart disease (binary classification)
 
-## 📊 Feature Importance (Gain Based)
+---
 
-The model ranked features by how much they improved decision trees:
+## 📊 Performance
 
-- **ST_Slope**: Most important feature (~50%)
-- **ExerciseAngina**, **ChestPainType**: Strong influence
-- **Cholesterol**, **Oldpeak**, **Sex**: Moderate influence
-- Other features (Age, MaxHR, FastingBS, RestingBP, etc.) had lower importance
+### ✅ ROC AUC Curve
 
-## 🛠️ Requirements
+The Receiver Operating Characteristic (ROC) curve evaluates the model’s ability to separate the two classes.  
+Higher AUC indicates better classification performance.
 
-- Python 3.x  
-- Libraries: `xgboost`, `pandas`, `matplotlib`
+> *AUC Score*: **0.89** (example — replace with actual if needed)
 
-Install dependencies with:
+![AUC Curve](./auc.png)
 
-```bash
-pip install xgboost pandas matplotlib
+---
+
+### 🧠 SHAP Feature Importance
+
+SHAP (SHapley Additive exPlanations) values were used to interpret the impact of each feature on model predictions.
+
+- Red = High Feature Value
+- Blue = Low Feature Value
+- X-axis = SHAP contribution to the prediction
+
+![SHAP Summary](./shap.png)
+
+---
+
+## ⚙️ How to Run
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/heart-risk-classifier.git
+   cd heart-risk-classifier
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the notebook:
+   Open `xgboost.ipynb` in Jupyter or VSCode.
+
+---
+
+## 📦 Requirements
+
+```
+xgboost
+pandas
+numpy
+matplotlib
+shap
+```
+
+---
+
+## 📜 License
+
+Licensed under the Apache License 2.0.
+
+---
+
+## 🧠 Author
+
+Made with ❤️ by Bala Marimuthu
