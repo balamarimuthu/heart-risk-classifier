@@ -4,7 +4,7 @@ This project uses the **XGBoost machine learning algorithm** to predict the pres
 
 ## 📁 Project Structure
 
-- `train_model.py`: Trains the XGBoost model on the dataset.
+- `xgboost.ipynb`: Trains the XGBoost model on the dataset.
 - `heart.csv`: The dataset used for training and testing.
 - `feature_importance_df.csv`: Visualization of feature importances.
 
